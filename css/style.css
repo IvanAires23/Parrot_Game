@@ -2,20 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
 body {
     background-color: #eef9bf;
-}
-
-.relogio {
-    text-align: right;
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 30px;
-    color: #75b79e;
 }
 
 .container {
@@ -33,12 +23,13 @@ body {
 .topo h1 {
     font-weight: 700;
     font-size: 56px;
+    font-family: "Roboto", sans-serif;
     color: #75b79e;
 }
 
 /* fim do header */
 
-.mesa {
+.cartas {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -49,65 +40,42 @@ body {
 .carta {
     width: 117px;
     height: 146px;
-    position: relative;
-    margin: 17px;
-}
-
-.imagem {
-    width: 100%;
-    height: 100%;
     background-color: #a7e9af;
-    border-radius: 5px;
     border: 1px solid #99cea8;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    transition: all 0.5s;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+    margin: 17px;
 }
 
-.imagem img {
+.carta img {
     width: 100px;
 }
 
-.face {
-    transform: rotateY(180deg);
-}
-
-.mostrarFace {
-    transform: rotateY(0deg);
-}
-
-.esconderCosta {
-    transform: rotateY(180deg);
-}
-
-/* medias query */
-
-@media (max-width: 990px) {
-    .mesa {
+@media (max-width:990px) {
+    .cartas {
         margin-top: 90px;
     }
 }
 
-@media (max-width: 577px) {
+@media (max-width:577px) {
     .topo h1 {
         font-size: 36px;
     }
 
-    .mesa {
+    .cartas {
         margin-top: 30px;
     }
 }
 
-@media (max-width: 477px) {
+@media (max-width:477px) {
+
     .container {
         width: 80%;
     }
 
-    .mesa {
+    .cartas {
         justify-content: center;
     }
 }
